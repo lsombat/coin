@@ -10,12 +10,8 @@ app.get('/',function(req,res){
   //It will find and locate index.html from View or Scripts
 });
 
-app.get('/about',function(req,res){
-  res.sendFile('/about.html');
-});
-
-app.get('/sitemap',function(req,res){
-  res.sendFile('/sitemap.html');
+app.get('/faq',function(req,res){
+  res.sendFile('faq.html', {"root": __dirname + '/views'});
 });
 
 app.listen(5000);
